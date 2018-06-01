@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, session, redirect, url_for
 from models import db, User, Place
 from forms import SignupFrom, LoginForm, AddressForm
 
-from flask.ext.heroku import Heroku
+from flask_heroku import Heroku
 
 app = Flask(__name__)
 
