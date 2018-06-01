@@ -8,7 +8,8 @@ app = Flask(__name__)
 
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:kvrao1234@localhost:5432/learningflask'
 heroku = Heroku(app)
-db.init_app(app)
+with app.app_context():
+    db.init_app(app)
 
 app.secret_key = "development-key"
 
